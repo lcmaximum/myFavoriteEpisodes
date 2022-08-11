@@ -8,6 +8,7 @@ import EpisodeList from "../../components/EpisodeList/EpisodeList.jsx";
 import EpisodeDetail from "../EpisodeDetail/EpisodeDetail";
 import NavBar from "../../components/NavBar/NavBar";
 
+
 export default function App() {
   const [user, setUser] = useState(getUser());
 
@@ -35,16 +36,19 @@ export default function App() {
     }
   ]);
   
+  function addEpisode(episode) {
+    setEpisodes([...episodes, episode]);
+  }
 
   return (
     <main className="App">
       {user ? (
         <>
           <NavBar user={user} setUser={setUser} />
-          <Routes>        <Route path="/" element={<EpisodeList episodeList={episodes} />} />
+          <Routes>        <Route path="/" element={<EpisodeList episodeList={episodes} addEpisode= {addEpisode} />} />
         <Route
           path="/episodes/:epID"
-          element={<EpisodeDetail episodes={episodes} />}
+          element={<EpisodeDetail episodes={episodes}  />}
         /></Routes>
         </>
       ) : (
