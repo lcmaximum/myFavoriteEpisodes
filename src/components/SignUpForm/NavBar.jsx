@@ -12,26 +12,9 @@ export default function NavBar({ user, setUser }) {
     <nav>
       ]<span>Welcome, {user.name}</span>
       &nbsp; | &nbsp;
-      <Link to="/">
-        Home
-      </Link>
       <Link to="" onClick={handleLogOut}>
         Log Out
       </Link>
     </nav>
   );
 }
-/*
-import { NavLink } from "react-router-dom";
-
-export default function NavBar() {
-  return (
-    <div>
-      <NavLink to="/">
-        <button className="navBtn">Home</button>
-      </NavLink>
-    </div>
-  );
-}
-
-*/ 
