@@ -1,8 +1,8 @@
 import { useParams } from "react-router-dom";
 
 export default function EpisodeDetail({ episodes }) {
-  let { epID } = useParams();
-  let thisEp = episodes.find((ep) => ep.id == epID);
+  let { epTitle } = useParams();
+  let thisEp = episodes.find((ep) => ep.episodeTitle == epTitle);
 
   return (
     <div>
