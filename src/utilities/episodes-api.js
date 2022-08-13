@@ -1,5 +1,5 @@
 import sendRequest from './send-request'
-const BASE_URL = '/api/episodes' //HEYCHRIS
+const BASE_URL = '/api/episodes' 
 
 export async function createEpisode(episodeData) {
     return sendRequest(BASE_URL, 'POST', episodeData)

@@ -3,7 +3,7 @@ import { useState } from "react";
 import { Routes, Route } from "react-router-dom";
 import { getUser } from "../../utilities/users-service";
 import AuthPage from "../AuthPage/AuthPage";
-
+import { createEpisode } from "../../utilities/episodes-service";
 import EpisodeList from "../../components/EpisodeList/EpisodeList.jsx";
 import EpisodeDetail from "../EpisodeDetail/EpisodeDetail";
 import NavBar from "../../components/NavBar/NavBar";
@@ -34,9 +34,10 @@ export default function App() {
   ]);
   
   function addEpisode(episode) {
-    setEpisodes([...episodes, episode]);
+  createEpisode(episode); 
+ setEpisodes([...episodes, episode]); //HEYY-ERRHANDLING
   }
-
+    
   return (
     <main className="App">
       {user ? (
