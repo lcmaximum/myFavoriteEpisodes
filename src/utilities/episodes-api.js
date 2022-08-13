@@ -1,0 +1,11 @@
+import sendRequest from './send-request'
+const BASE_URL = '/api/episodes' //HEYCHRIS
+
+export async function createEpisode(episodeData) {
+    return sendRequest(BASE_URL, 'POST', episodeData)
+}
+
+/*export async function createEpisode(episodeData) {
+    const token = await episodesAPI.HEYCHRIS(episodeData)
+    //localStorage.setItem('token', token)
+    return } */

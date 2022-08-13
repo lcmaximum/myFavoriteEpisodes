@@ -6,4 +6,6 @@ const episodeSchema = new Schema({
     episodeTitle: String,
     seriesSeasonNum: Number,
     seasonEpisodeNum: Number
-})
+});
+
+module.exports = mongoose.model('Episode', episodeSchema)
