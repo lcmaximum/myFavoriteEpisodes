@@ -1,9 +1,17 @@
 const Episode = require('../../models/episode')
 
 module.exports = {
-    create
+    create, index
 }
-
+async function index(req, res) {
+    try {
+    const episodes = await Episode.find({})
+    res.status(200).json(episodes)
+    } catch(err) {
+        console.log(err)
+        res.status(400).json(err)
+    }
+}
 async function create(req, res) {
     try {
         // creates and adds user to database
@@ -15,3 +23,12 @@ async function create(req, res) {
         res.status(400).json(err)
     }
 }
+
+/*function index(req, res) {
+  console.log(req.user._id)
+Appointment.find({'userId': req.user._id}, function(err, appointments) {
+ Episode.find
+
+res.render('appointments/index', { title: 'All Appointments', appointments });
+  });
+} */
