@@ -15,7 +15,7 @@ users share reviews of their favorite episodes of any tv series
 
 [] Implement delete functionality
 
-[] Replace hard-coded episodes array with database entries (This is the read portion of CRUD)
+[x] Replace hard-coded episodes array with database entries (This is the read portion of CRUD)
 
 
 [] Hook up login to database

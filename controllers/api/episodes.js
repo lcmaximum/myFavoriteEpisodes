@@ -5,7 +5,7 @@ module.exports = {
 }
 async function index(req, res) {
     try {
-    const episodes = await Episode.find({})
+    const episodes = await Episode.find({'addedBy': req.user.name})
     res.status(200).json(episodes)
     } catch(err) {
         console.log(err)
@@ -14,7 +14,6 @@ async function index(req, res) {
 }
 async function create(req, res) {
     try {
-        // creates and adds user to database
         const episode = await Episode.create(req.body)
         res.status(200).json(episode)
         // return episode;

@@ -1,11 +1,14 @@
  import { useState } from "react";
 
-export default function NewEpisodeForm({ addEpisode }) {
+export default function NewEpisodeForm({ addEpisode, user }) {
   const [newEpisode, setNewEpisode] = useState(
     { seriesTitle: "", 
     episodeTitle: "", 
     seriesSeasonNum: 1, 
-    seasonEpisodeNum: 1 });
+    seasonEpisodeNum: 1,
+    addedBy: user.name
+
+   });
 
 
 
@@ -14,7 +17,8 @@ export default function NewEpisodeForm({ addEpisode }) {
     setNewEpisode({ seriesTitle: "", 
     episodeTitle: "", 
     seriesSeasonNum: 1, 
-    seasonEpisodeNum: 1});
+    seasonEpisodeNum: 1,
+    addedBy: {user}});
   }
 
   return (
@@ -25,7 +29,7 @@ export default function NewEpisodeForm({ addEpisode }) {
         placeholder="Series"
         onChange={(e) =>
           setNewEpisode({ seriesTitle: e.target.value, episodeTitle: newEpisode.episodeTitle, seriesSeasonNum: newEpisode.seriesSeasonNum,
-        seasonEpisodeNum: newEpisode.seasonEpisodeNum })
+        seasonEpisodeNum: newEpisode.seasonEpisodeNum, addedBy: newEpisode.addedBy })
         }
       />
     {/* seriesTitle: "Severance",
@@ -38,7 +42,7 @@ export default function NewEpisodeForm({ addEpisode }) {
         placeholder="Episode Title"
         onChange={(e) =>
           setNewEpisode({ seriesTitle: newEpisode.seriesTitle, episodeTitle: e.target.value, seriesSeasonNum: newEpisode.seriesSeasonNum,
-        seasonEpisodeNum: newEpisode.seasonEpisodeNum })
+        seasonEpisodeNum: newEpisode.seasonEpisodeNum, addedBy: newEpisode.addedBy })
         }  />
       <input type="text"
         value={newEpisode.seriesSeasonNum}

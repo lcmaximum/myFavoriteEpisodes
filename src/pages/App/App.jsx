@@ -15,6 +15,7 @@ export default function App() {
   const [episodes, setEpisodes] = useState([]);
   
   function addEpisode(episode) {
+    
   createEpisode(episode); 
  setEpisodes([...episodes, episode]);
   //HEYY-ERRHANDLING
@@ -36,7 +37,7 @@ useEffect(function() {
         <>
           <NavBar user={user} setUser={setUser} />
           <Routes>        
-            <Route path="/" element={<EpisodeList episodeList={episodes} addEpisode= {addEpisode} />} />
+            <Route path="/" element={<EpisodeList user={user} episodeList={episodes} addEpisode= {addEpisode} />} />
         <Route
           path="/episodes/:epTitle"
           element={<EpisodeDetail episodes={episodes}  />}

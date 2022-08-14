@@ -5,7 +5,8 @@ const episodeSchema = new Schema({
     seriesTitle: String, //change to schema after hitting mvp
     episodeTitle: String,
     seriesSeasonNum: Number,
-    seasonEpisodeNum: Number
+    seasonEpisodeNum: Number,
+    addedBy: String
 });
 
 module.exports = mongoose.model('Episode', episodeSchema)
