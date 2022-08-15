@@ -6,7 +6,7 @@ const episodeSchema = new Schema({
     episodeTitle: String,
     seriesSeasonNum: Number,
     seasonEpisodeNum: Number,
-    addedBy: String
+    addedBy: {type: Schema.Types.ObjectId, ref: 'User'} //MDBREF - 
 });
 
 module.exports = mongoose.model('Episode', episodeSchema)

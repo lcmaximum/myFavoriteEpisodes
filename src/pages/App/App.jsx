@@ -40,8 +40,8 @@ useEffect(function() {
           <Routes>        
             <Route path="/" element={<EpisodeList user={user} episodeList={episodes} addEpisode= {addEpisode} />} />
         <Route
-          path="/episodes/:_id"
-          element={<EpisodeDetail episodes={episodes}  />}
+          path="/episodes/:epTitle"
+          element={<EpisodeDetail episodes={episodes}  user={user}/>}
         />
          <Route
           path="/episodes/:_id/delete"

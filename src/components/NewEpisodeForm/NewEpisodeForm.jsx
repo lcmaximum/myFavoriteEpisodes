@@ -6,7 +6,6 @@ export default function NewEpisodeForm({ addEpisode, user }) {
     episodeTitle: "", 
     seriesSeasonNum: "", 
     seasonEpisodeNum: "",
-    addedBy: user.name
 
    });
 
