@@ -3,9 +3,10 @@ import { useState, useEffect } from "react";
 import { Routes, Route } from "react-router-dom";
 import { getUser } from "../../utilities/users-service";
 import AuthPage from "../AuthPage/AuthPage";
-import { getEpisodes, createEpisode } from "../../utilities/episodes-service";
+import { getEpisodes, createEpisode} from "../../utilities/episodes-service";
 import EpisodeList from "../../components/EpisodeList/EpisodeList.jsx";
 import EpisodeDetail from "../EpisodeDetail/EpisodeDetail";
+import DeleteEpisode from "../../components/DeleteEpisode/DeleteEpisode"
 import NavBar from "../../components/NavBar/NavBar";
 
 
@@ -39,9 +40,16 @@ useEffect(function() {
           <Routes>        
             <Route path="/" element={<EpisodeList user={user} episodeList={episodes} addEpisode= {addEpisode} />} />
         <Route
-          path="/episodes/:epTitle"
+          path="/episodes/:_id"
           element={<EpisodeDetail episodes={episodes}  />}
-        /></Routes>
+        />
+         <Route
+          path="/episodes/:_id/delete"
+          element={<DeleteEpisode />}
+        />
+        
+        
+        </Routes>
         </>
       ) : (
         <AuthPage setUser={setUser} />

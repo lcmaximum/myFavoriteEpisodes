@@ -7,3 +7,7 @@ export async function getEpisodes() {
 export async function createEpisode(episodeData) {
   return await episodesAPI.createEpisode(episodeData)
      } 
+
+export async function deleteEpisode(episode) {
+  return await episodesAPI.deleteEpisode(episode)
+         } 

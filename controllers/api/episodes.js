@@ -1,7 +1,7 @@
 const Episode = require('../../models/episode')
 
 module.exports = {
-    create, index
+    create, index, delete: deleteEpisode
 }
 async function index(req, res) {
     try {
@@ -23,11 +23,14 @@ async function create(req, res) {
     }
 }
 
-/*function index(req, res) {
-  console.log(req.user._id)
-Appointment.find({'userId': req.user._id}, function(err, appointments) {
- Episode.find
+async function deleteEpisode(req, res) {
+    try{
+        const episode = await Episode.findByIdAndDelete(req.params.id);
+        res.status(200).json(episode) 
+    } catch(err){ 
+        console.log(err);
+        res.status(400).json(err);
 
-res.render('appointments/index', { title: 'All Appointments', appointments });
-  });
-} */
+
+    }
+}

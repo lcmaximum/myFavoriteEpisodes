@@ -4,8 +4,8 @@ export default function NewEpisodeForm({ addEpisode, user }) {
   const [newEpisode, setNewEpisode] = useState(
     { seriesTitle: "", 
     episodeTitle: "", 
-    seriesSeasonNum: 1, 
-    seasonEpisodeNum: 1,
+    seriesSeasonNum: "", 
+    seasonEpisodeNum: "",
     addedBy: user.name
 
    });
@@ -16,8 +16,8 @@ export default function NewEpisodeForm({ addEpisode, user }) {
     addEpisode(newEpisode);
     setNewEpisode({ seriesTitle: "", 
     episodeTitle: "", 
-    seriesSeasonNum: 1, 
-    seasonEpisodeNum: 1,
+    seriesSeasonNum: "", 
+    seasonEpisodeNum: "",
     addedBy: {user}});
   }
 
@@ -32,10 +32,7 @@ export default function NewEpisodeForm({ addEpisode, user }) {
         seasonEpisodeNum: newEpisode.seasonEpisodeNum, addedBy: newEpisode.addedBy })
         }
       />
-    {/* seriesTitle: "Severance",
-      seriesSeasonNum: 1,
-      seasonEpisodeNum: 1,
-    episodeTitle: "The Good News About Hell" */}
+
           <input
         type="text"
         value={newEpisode.episodeTitle}
@@ -60,7 +57,7 @@ export default function NewEpisodeForm({ addEpisode, user }) {
           setNewEpisode({ seriesTitle: newEpisode.seriesTitle, episodeTitle: newEpisode.episodeTitle, seriesSeasonNum: newEpisode.seriesSeasonNum,
         seasonEpisodeNum: e.target.value })
         } />
-      <button onClick={handleAddEpisode}>ADD</button>
+      <button onClick={handleAddEpisode}>Add Episode</button>
     </div>
   );
 }
