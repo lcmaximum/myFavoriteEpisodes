@@ -9,6 +9,10 @@ export async function createEpisode(episodeData) {
     return sendRequest(BASE_URL, 'POST', episodeData)
 }
 
+export async function updateEpisode(episodeData, id) {
+    return sendRequest(`${BASE_URL}/${id}/edit`, 'PUT', episodeData) // add
+}
+
 export async function deleteEpisode(episode) {
     return sendRequest(BASE_URL, 'DELETE', episode)
 }

@@ -1,7 +1,7 @@
 const Episode = require('../../models/episode')
 
 module.exports = {
-    create, index, delete: deleteEpisode, createReview
+    create, index, delete: deleteEpisode, createReview, updateEpisode
 }
 async function index(req, res) {
     try {
@@ -34,6 +34,18 @@ async function deleteEpisode(req, res) {
         res.status(400).json(err);
 
 
+    }
+}
+//Heyyyyyyyyy
+async function updateEpisode(req,res) {
+     
+      try{
+        const episode= await Episode.findByIdAndUpdate(req.params.id, 
+            {episodeTitle: req.body.episodeTitle}, {new: true})
+            res.json(episode)
+                }
+    catch(err){
+        console.log(err)
     }
 }
 

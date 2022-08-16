@@ -5,8 +5,7 @@ export default function NewEpisodeForm({ addEpisode, user }) {
     { seriesTitle: "", 
     episodeTitle: "", 
     seriesSeasonNum: "", 
-    seasonEpisodeNum: "",
-    reviews: [{author: {user}, displayName: 'fake', content: 'no reviews yet'}]
+    seasonEpisodeNum: ""
 
    });
 

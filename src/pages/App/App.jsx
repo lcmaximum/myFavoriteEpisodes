@@ -8,17 +8,17 @@ import EpisodeList from "../../components/EpisodeList/EpisodeList.jsx";
 import EpisodeDetail from "../EpisodeDetail/EpisodeDetail";
 import DeleteEpisode from "../../components/DeleteEpisode/DeleteEpisode"
 import NavBar from "../../components/NavBar/NavBar";
-
+import EditEpisodeForm from "../../components/EditEpisodeForm/EditEpisodeForm"
 
 export default function App() {
   const [user, setUser] = useState(getUser());
 
   const [episodes, setEpisodes] = useState([]);
   
-  function addEpisode(episode) {
+  async function addEpisode(episode) {
     
-  createEpisode(episode); 
- setEpisodes([...episodes, episode]);
+ const newEpisode = await createEpisode(episode)
+ setEpisodes([...episodes, newEpisode]);
   //HEYY-ERRHANDLING
   }
     
@@ -47,7 +47,10 @@ useEffect(function() {
           path="/episodes/:_id/delete"
           element={<DeleteEpisode />}
         />
-        
+                 <Route
+          path="/episodes/:_id/edit"
+          element={<EditEpisodeForm episodes={episodes} setEpisodes={setEpisodes}/>}
+        />
         
         </Routes>
         </>

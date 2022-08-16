@@ -12,7 +12,7 @@ export default function Episode({ info, user }) {
       </Link>
       {user._id === info.addedBy ? (
         <>
-        <Link to={`/episodes/${info.episodeTitle}/edit`}>edit</Link>
+        <Link to={`/episodes/${info._id}/edit`}>edit</Link>
          <Link to={`/episodes/${info._id}/delete`}>delete</Link>
 
         </>
