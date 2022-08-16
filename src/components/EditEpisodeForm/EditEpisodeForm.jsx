@@ -21,7 +21,7 @@ export default function EditEpisodeForm({episodes, setEpisodes}){
 
     async function updateEpisode(formData){
         const updatedEpisode = await episodesAPI.updateEpisode(formData, _id);
-        const episodesCopy = [... episodes] //heyyyyy this is the copy
+        const episodesCopy = [...episodes] //heyyyyy this is the copy
         const idx = episodesCopy.findIndex((ep) => ep._id === updatedEpisode._id )
         episodesCopy.splice(idx,1,updatedEpisode);
         setEpisodes(episodesCopy);
