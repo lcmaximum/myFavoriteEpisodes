@@ -6,6 +6,7 @@ export default function NewEpisodeForm({ addEpisode, user }) {
     episodeTitle: "", 
     seriesSeasonNum: "", 
     seasonEpisodeNum: "",
+    reviews: [{author: {user}, displayName: 'fake', content: 'no reviews yet'}]
 
    });
 
@@ -17,7 +18,8 @@ export default function NewEpisodeForm({ addEpisode, user }) {
     episodeTitle: "", 
     seriesSeasonNum: "", 
     seasonEpisodeNum: "",
-    addedBy: {user}});
+    addedBy: {user},
+    reviews: []});
   }
 
   return (

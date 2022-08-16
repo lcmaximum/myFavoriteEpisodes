@@ -1,7 +1,7 @@
 const Episode = require('../../models/episode')
 
 module.exports = {
-    create, index, delete: deleteEpisode
+    create, index, delete: deleteEpisode, createReview
 }
 async function index(req, res) {
     try {
@@ -36,3 +36,38 @@ async function deleteEpisode(req, res) {
 
     }
 }
+
+async function createReview (req, res) {
+
+    try {
+
+        const episode = await Episode.findByIdAndUpdate(req.params.id, {$push: { reviews: req.body}}, {new: true}) //HEYYY TIMESTAMPS
+        if(episode) {
+            res.status(200).json(episode)    
+        } else {
+            res.status(404).json({message:'Episode Not Found'})    
+        }
+
+    } catch (error) {
+        res.status(400).json({message:error.message})
+    }
+}
+
+
+const deleteReview = async (req, res) => {
+
+
+    try {
+
+        const episode = await Episode.findByIdAndUpdate(req.params.episodeID, {$pull: { reviews: {_id: req.params.reviewID}}}, {new: true, upsert:true})
+        if(episode) {
+            res.status(200).json(episode)    
+        } else {
+            res.status(404).json({message:'Episode Not Found'})    
+        }
+        
+
+
+    } catch (error) {
+        res.status(400).json({message:error.message})
+    }}

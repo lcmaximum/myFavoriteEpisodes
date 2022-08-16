@@ -1,4 +1,6 @@
 import { useParams } from "react-router-dom";
+import EpisodeReviews from '../../components/EpisodeReviews/EpisodeReviews'
+import EpisodeReviewForm from '../../components/EpisodeReviewForm/EpisodeReviewForm'
 
 export default function EpisodeDetail({ episodes, user }) {
   let { epTitle } = useParams();
@@ -6,6 +8,7 @@ export default function EpisodeDetail({ episodes, user }) {
   let thisEp = episodes.find((ep) => ep.episodeTitle === epTitle);
 console.log('thisEp added by ', thisEp.addedBy);
 console.log('user ', user._id);
+
 
   return (
     <div>
@@ -15,6 +18,9 @@ console.log('user ', user._id);
      {user._id === thisEp.addedBy ? <h3>added by you</h3> 
      : 
      <h3>Added by {thisEp.addedBy.name}</h3> }
+      <EpisodeReviews reviews={thisEp.reviews}/>
+     <EpisodeReviewForm />
+
     </div>
   );
 }
