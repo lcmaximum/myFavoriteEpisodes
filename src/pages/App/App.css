@@ -5,8 +5,14 @@
 }
 
 .NewEpisodeForm {
-  max-width: 50%;
-  border: solid;
+  max-width: 75%;
+  border: solid darkblue;
+  border-radius: 15px;
+  margin: 8%;
+}
+
+input {
+  border-radius: 5px;
 }
 
 ul {

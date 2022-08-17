@@ -23,6 +23,7 @@ export default function NewEpisodeForm({ addEpisode, user }) {
 
   return (
     <div className="NewEpisodeForm">
+      <h3>Add Episode</h3>
       <input
         type="text"
         value={newEpisode.seriesTitle}

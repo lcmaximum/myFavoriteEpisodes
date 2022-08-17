@@ -1,12 +1,12 @@
 .episodeListHeader {
     text-align: right;
-    padding-right: 5%;
+    padding-right: 3%;
     border-top: solid;
     border-bottom: solid;
 }
 
 .ep-list-and-form {
-    border: solid;
+
     display: flex;
     flex-direction: row-reverse;
   }
