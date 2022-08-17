@@ -11,7 +11,7 @@ MongoDB - Express - ReactJS - NodeJS
 
 <h3>Getting Started</h3>
 Trello: https://trello.com/b/nEmc7mpy/proj-4-my-favorite-episode
-
+Heroku: https://my-favoite-episode.herokuapp.com (sic)
 <h3>Next Steps</h3>
 In the short term: 
 get reviews and "show all" page working
