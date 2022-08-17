@@ -1,6 +1,9 @@
-My Favorite Episodes
+<h1>My Favorite Episodes</h1>
 
+<h3>Description</h3>
 users share reviews of their favorite episodes of any tv series
+
+
 
 
 ## Checklist for application

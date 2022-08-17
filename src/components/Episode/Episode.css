@@ -1,0 +1,4 @@
+.ep-list-and-form {
+    display: flex;
+    flex-direction: row-reverse;
+}
