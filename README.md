@@ -4,7 +4,7 @@
 users share reviews of their favorite episodes of any tv series
 
 <h3>Screenshot</h3>
-https://user-images.githubusercontent.com/50636191/185184067-346f8966-2017-4545-9c11-99a31d4ca7b2.png)
+https://user-images.githubusercontent.com/50636191/185184067-346f8966-2017-4545-9c11-99a31d4ca7b2.png
 
 <h3>Technologies Used</h3>
 MongoDB - Express - ReactJS - NodeJS
