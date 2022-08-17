@@ -10,7 +10,7 @@ https://user-images.githubusercontent.com/50636191/185184067-346f8966-2017-4545-
 MongoDB - Express - ReactJS - NodeJS
 
 <h3>Getting Started</h3>
-Trello: https://trello.com/b/nEmc7mpy/proj-4-my-favorite-episode
+Trello: https://trello.com/b/nEmc7mpy/proj-4-my-favorite-episode<br />
 Heroku: (https://myfavoriteepisode.herokuapp.com/)
 <h3>Next Steps</h3>
 In the short term: 
