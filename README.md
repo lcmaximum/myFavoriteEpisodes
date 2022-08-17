@@ -9,5 +9,6 @@ users share reviews of their favorite episodes of any tv series
 MongoDB - Express - ReactJS - NodeJS
 
 <h3>Getting Started</h3>
+Trello: https://trello.com/b/nEmc7mpy/proj-4-my-favorite-episode
 
 <h3>Next Steps</h3>
